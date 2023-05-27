@@ -1,24 +1,18 @@
 <?php
 // +----------------------------------------------------------------------
-// | ThinkPHP [ WE CAN DO IT JUST THINK ]
-// +----------------------------------------------------------------------
-// | Copyright (c) 2006~2016 http://thinkphp.cn All rights reserved.
-// +----------------------------------------------------------------------
-// | Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
-// +----------------------------------------------------------------------
-// | Author: liu21st <liu21st@gmail.com>
+// | Username:admin2    Password:www.xiaoerbolg.cn
 // +----------------------------------------------------------------------
 return [
     // 数据库类型
     'type'            => 'mysql',
     // 服务器地址
-    'hostname'        => '127.0.0.1',
+    'hostname'        => 'sql.freedb.tech',
     // 数据库名
-    'database'        => 'yingshi2_nanshen',
+    'database'        => 'freedb_skinsrestorer',
     // 用户名
-    'username'        => 'yingshi2_nanshen',
+    'username'        => 'freedb_mmlibskins',
     // 密码
-    'password'        => 'jySN4y6p63jBhnJf',
+    'password'        => '%R?Zq%?wz6JpU4K',
     // 端口
     'hostport'        => '3306',
     // 连接dsn
