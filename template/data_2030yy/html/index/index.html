@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="yes" name="apple-touch-fullscreen">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="telephone=no,email=no" name="format-detection">
+<meta name="renderer" content="webkit">
+<meta name="wap-font-scale" content="no">
+<meta name="applicable-device" content="pc,mobile">
+<title>{if $maccms.seo.vod.name ==''}{$maccms.site_name}{else/}{$maccms.seo.vod.name}{/if}</title> 
+<meta name="keywords" content="{if $maccms.seo.vod.key ==''}{$maccms.site_keywords}{else/}{$maccms.seo.vod.key}{/if}" />
+<meta name="description" content="{if $maccms.seo.vod.des ==''}{$maccms.site_description}{else/}{$maccms.seo.vod.des}{/if}" />
+{include file='public/include' /}
+</head>
+<body>
+{include file='public/header' /}
+<div class="wrap">
+  <div class="profile_info" id="wxxf">
+    <p class="profile_desc" style="color:red; font-weight:bold;">重要公告:本站支持手机访问，您的宣传是我们更新的最大动力！源码由菜鸟吧源码出品 www.aqiyuanma.com</p>
+  </div>
+  {maccms:type ids="parent" order="asc" by="sort" mid="1" id="v" key="i"}
+  <div class="row">
+    <div class="menulist clearfix">
+      <div class="menulist-l">
+        <div class="ilist">
+          <div class="stit clearfix">
+             <a class="more" target="_blank" href="{:mac_url_type($v)}">更多</a>
+             <a class="title" href="{:mac_url_type($v)}">{$v.type_name}</a>
+          </div>
+          <ul class="ul mb_none">
+            {maccms:vod num="10" type="'.$v['type_id'].'"  order="desc" by="hits_day"}
+            <li><a href='{:mac_url_vod_detail($vo)}' target="_blank"><span class="score">{$vo.vod_time|date="m-d",###}</span><span class="num">{$key}</span>{$vo.vod_name}</a></li>
+            {/maccms:vod}
+          </ul>
+        </div>
+      </div>
+      <div class="menulist-r">
+        <div></div>
+        <div class="list clearfix">
+          <div>
+            <ul>
+               {maccms:vod num="12" type="'.$v['type_id'].'"  order="desc" by="time"}
+              <li>
+                <div class="li_li clearfix">
+                  <div class="li_all">
+                    <div class="li_img">
+                     <a href="{:mac_url_vod_detail($vo)}">
+                        <img class="dpic dh" src="{$vo.vod_pic|mac_url_img}">
+                        <span class="rgba1 ba-r">{$vo.vod_remarks}</span>
+                     </a>
+                     </div>
+                    <div class="li_text">
+                      <p class="name"><a href="{:mac_url_vod_detail($vo)}">{$vo.vod_name}</a></p>
+                      <p class="actor">{$vo.vod_actor}</p>
+                    </div>
+                    <a class="alink" target="_blank" href="{:mac_url_vod_detail($vo)}" title="{$vo.vod_name}"></a></div>
+                </div>
+              </li>
+              {/maccms:vod} 
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {/maccms:type}
+{include file='public/link' /}
+</div>
+{include file='public/footer' /}
+</body>
+</html>

@@ -1,0 +1,11 @@
+<li>
+   <div class="li_li clearfix">
+     <div class="li_all">
+       <div class="li_img"><a href="{:mac_url_vod_detail($vo)}"><img class="dpic dh" src="{:mac_url_img($vo.vod_pic)}"><span class="rgba1">{$vo.vod_remarks}</span></a></div>
+       <div class="li_text">
+         <p class="name"><a href="{:mac_url_vod_detail($vo)}">{$vo.vod_name}</a></p>
+         <p class="actor">{$vo.vod_time|date="m-d",###}</p>
+       </div>
+       <a class="alink" target="_blank" href="{:mac_url_vod_detail($vo)}" title="天之云，地之雾"></a></div>
+   </div>
+ </li>

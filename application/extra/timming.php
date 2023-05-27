@@ -1,0 +1,103 @@
+<?php
+return array (
+  'aa' => 
+  array (
+    'id' => 'aa',
+    'status' => '0',
+    'name' => 'aa',
+    'des' => '采集今日数据',
+    'file' => 'collect',
+    'param' => 'ac=cjday&xt=1&ct=&rday=24&cjflag=tv6_com&cjurl=http://cj2.tv6.com/mox/inc/youku.php',
+    'weeks' => '1,2,3,4,5,6,0',
+    'hours' => '00,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23',
+    'runtime' => 1597629775,
+  ),
+  'bb' => 
+  array (
+    'status' => '0',
+    'name' => 'bb',
+    'des' => '生成首页',
+    'file' => 'make',
+    'param' => 'ac=index',
+    'weeks' => '1,2,3,4,5,6,0',
+    'hours' => '00,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23',
+    'id' => 'bb',
+    'runtime' => 1535348998,
+  ),
+  'bd' => 
+  array (
+    'id' => 'bd',
+    '__token__' => 'e53ff4c909e51ed9a1a5de5acdc7e4c3',
+    'status' => '1',
+    'name' => 'bd',
+    'des' => '百度',
+    'file' => 'collect',
+    'param' => '/collect/api.html?ac=cj&cjflag=378e9bb2bbb791bc689253d8ad24b8ec&cjurl=https%3A%2F%2Fwww.feisuzyapi.com%2Fapi.php%2Fprovide%2Fvod%2Ffrom%2Ffsm3u8%2F&h=&t=&ids=&wd=&type=2&mid=1&opt=0&sync_pic_opt=0&filter=0&filter_from=&param=',
+    'weeks' => '1,2,3,4,5,6,0',
+    'hours' => '00,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23',
+  ),
+  'hn' => 
+  array (
+    'id' => 'hn',
+    '__token__' => 'bf721c9b48051e216bce9657a59dd78f',
+    'status' => '1',
+    'name' => 'hn',
+    'des' => '',
+    'file' => 'collect',
+    'param' => 'http://www.baitaoys.com/ht.php/admin/collect/api.html?ac=cj&cjflag=0388ded045382c5bf15ff53ec75d42c2&cjurl=https%3A%2F%2Fwww.hongniuzy2.com%2Fapi.php%2Fprovide%2Fvod%2Ffrom%2Fhnm3u8&h=24&t=&ids=&wd=&type=2&mid=1&opt=0&sync_pic_opt=0&filter=0&filter_from=&param=',
+    'weeks' => '1,2,3,4,5,6,0',
+    'hours' => '00,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23',
+    'runtime' => 1645060201,
+  ),
+  'tk' => 
+  array (
+    'id' => 'tk',
+    '__token__' => 'e341fa60483304df52760b0b6598210d',
+    'status' => '1',
+    'name' => 'tk',
+    'des' => '',
+    'file' => 'collect',
+    'param' => 'http://www.baitaoys.com/ht.php/admin/collect/api.html?ac=cj&cjflag=39877644bdd349e231fabd93b3d34898&cjurl=https%3A%2F%2Fm3u8.tiankongapi.com%2Fapi.php%2Fprovide%2Fvod%2Fat%2Fxml%2F&h=24&t=&ids=&wd=&type=1&mid=1&opt=0&sync_pic_opt=0&filter=0&filter_from=&param=',
+    'weeks' => '1,2,3,4,5,6,0',
+    'hours' => '00,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23',
+    'runtime' => 1645060501,
+  ),
+  'uk' => 
+  array (
+    'id' => 'uk',
+    '__token__' => 'bbd967bd92c2363cd2de5c2d89f6b775',
+    'status' => '1',
+    'name' => 'uk',
+    'des' => '',
+    'file' => 'collect',
+    'param' => 'http://www.baitaoys.com/ht.php/admin/collect/api.html?ac=cj&cjflag=60dd0f4eb2401f7e5380ad3ccb9b7fad&cjurl=https%3A%2F%2Fapi.ukuapi.com%2Fapi.php%2Fprovide%2Fvod%2Ffrom%2Fukm3u8%2Fat%2Fxml%2F&h=24&t=&ids=&wd=&type=1&mid=1&opt=0&sync_pic_opt=0&filter=0&filter_from=&param=',
+    'weeks' => '1,2,3,4,5,6,0',
+    'hours' => '00,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23',
+    'runtime' => 1645060801,
+  ),
+  'sd' => 
+  array (
+    'id' => 'sd',
+    '__token__' => '0443429170c79ba94816383ee8af67e2',
+    'status' => '1',
+    'name' => 'sd',
+    'des' => '',
+    'file' => 'collect',
+    'param' => 'http://www.baitaoys.com/ht.php/admin/collect/api.html?ac=cj&cjflag=274612a45603fcec71500e55ae97b1e4&cjurl=https%3A%2F%2Fsdzyapi.com%2Fapi.php%2Fprovide%2Fvod%2Ffrom%2Fsdm3u8%2Fat%2Fxml%2F&h=24&t=&ids=&wd=&type=1&mid=1&opt=0&sync_pic_opt=0&filter=0&filter_from=&param=',
+    'weeks' => '1,2,3,4,5,6,0',
+    'hours' => '00,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23',
+    'runtime' => 1645061101,
+  ),
+  'ts' => 
+  array (
+    'id' => 'ts',
+    '__token__' => 'cb1f4efed055748efb5d5f8ddb4bab0a',
+    'status' => '1',
+    'name' => 'ts',
+    'des' => '',
+    'file' => 'collect',
+    'param' => 'http://www.baitaoys.com/ht.php/admin/urlsend/push.html?ac=Baidu&limit=50&page=1&range=0&ac2=today&mid=1',
+    'weeks' => '1,2,3,4,5,6,0',
+    'hours' => '00,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23',
+  ),
+);

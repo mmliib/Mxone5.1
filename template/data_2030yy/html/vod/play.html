@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="yes" name="apple-touch-fullscreen">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="telephone=no,email=no" name="format-detection">
+<meta name="renderer" content="webkit">
+<meta name="wap-font-scale" content="no">
+<meta name="applicable-device" content="pc,mobile">
+<title>《{$obj.vod_name}》在线观看播放 - {$maccms.site_name}</title>
+<meta name="keywords" content="{$obj.vod_name},{$obj.vod_name}在线观看,{$obj.vod_name}免费观看,{$obj.vod_name}完整版,{$obj.vod_name}未删减版" />
+<meta name="description" content="{$obj.vod_name}高清完整版免费在线观看，本站支持手机和电脑在线观看{$obj.type_1.type_name}{$obj.vod_name}，还有关于{$obj.vod_name}的演员表、剧情介绍、影评等信息。" />
+{include file='public/include' /}
+</head>
+<body>
+{include file='public/header' /}
+<div class="wrap">
+   <div class="stit mb_none clearfix"><span class="ico gang1"></span><a href="/">首页</a>&nbsp;&nbsp;»&nbsp;&nbsp;<a href="{:mac_url_type($obj.type)}">{$obj.vod_name}</a>&nbsp;&nbsp;»&nbsp;&nbsp;{$obj.vod_name}</div>
+
+   <div class="row_top">
+      <div class="playerall">
+         <div class="player">
+            {$player_data} {$player_js}
+         </div>
+      </div>
+   </div>
+   <script type="text/javascript">
+   $(function(){
+      $MH.recordHistory({name: '{$obj.vod_name}',link: window.location.href})  
+   })
+      
+   </script>
+   <div id="stab11" class="row clearfix">
+      {maccms:foreach name="obj.vod_play_list" id="vo"}
+      <div class="playlist clearfix">
+        <div class="ptit clearfix"><font color="red" style="margin-left:10px;">百度云</font>晚高峰期可能卡顿请耐心等待缓存一会观看！</div>
+        <ul class="ulli clearfix">
+          <div id="stab_11" class="stab_list">
+            <ul class="clearfix">
+               {maccms:foreach name="vo.urls" id="vo2" key="key2"}
+               <li><a href="{:mac_url_vod_play($obj,['sid'=>$vo.sid,'nid'=>$vo2.nid])}" {if condition="$param.sid eq $vo.sid && $param.nid eq $vo2.nid"}style="color:red" {/if} >{$vo2.name}</a></li>
+               {/maccms:foreach}
+            </ul>
+          </div>
+        </ul>
+      </div>
+      {/maccms:foreach}
+   </div>
+
+
+    <div class="row">
+      <div class="ndes" id="pcjq">
+        <div class="ptit"><i class="gang"></i>相关视频</div>
+        <div class="channel">
+          <div class="list contentlis clearfix">
+            <ul class="cont1 clearfix">
+               {maccms:vod num="8" type="current" order="desc" by="score"}
+               {include file='block/vod-item' /} 
+               {/maccms:vod}
+            </ul>
+            <ul class="txt-list txt-list-small clearfix">
+               {maccms:vod num="20" type="all" order="desc" by="hits_day"}
+               <li class="mbdsnone"><span>{$key}.</span><a target="_blank" href="{:mac_url_vod_detail($vo)}">{$vo.vod_name}</a>{$vo.vod_remarks}</li>
+               {/maccms:vod}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>    
+    
+ 
+
+</div>
+{include file='public/footer' /}
+</body>
+</html>

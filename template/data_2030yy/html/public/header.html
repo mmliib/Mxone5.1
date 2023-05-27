@@ -1,0 +1,94 @@
+<div id="pgcontainer">
+   <div class="header">
+      <div class="head clearfix">
+      <div class="logo"><a class="logobg" href="/"></a>
+         <link href="/favicon.ico"/>
+      </div>
+
+      <div class="nav_other mb_none">
+         <ul class="clearfix">
+            <li><a href="/"target="_blank">首页</a></li>
+         </ul>
+      </div>
+      {maccms:type ids="parent" order="asc" by="sort" mid="1" id="vo1" key="key1"}
+      <div class="nav mb_none">
+         <span class="nav_name">
+            <a href="{:mac_url_type($vo1,[],'show')}" target="_blank" class="curjs cur"><span class="ttname">{$vo1.type_name}</span><i class="ico arrow"></i></a>
+         <div class="nav_down clearfix">
+            <div class="nav_1000">
+            <ul>
+               {maccms:type parent="'.$vo1['type_id'].'" order="asc" by="sort" id="vo2" key="key2"}
+               <li><a href="{:mac_url_type($vo2,[],'show')}" target="_blank">{$vo2.type_name}</a></li>
+               {/maccms:type}
+            </ul>
+            </div>
+         </div>
+         </span>
+      </div>
+      {/maccms:type}
+   
+
+     
+
+
+      <div class="nav_history mb_none aa"><span class="drop-down nav-item bb" id="nav-looked"><a href="javascript:void(0)" onMouseOver="$MH.showHistory(1);" class="nav-link drop-title">观看历史</a>
+            <div class="cc">
+            
+               <script type="text/javascript">
+                  $MH.limit = 10;$MH.WriteHistoryBox(180, 170, 'font');
+
+
+                  $MH.recordHistory({name: '{$obj.vod_name}',link: `{:mac_url_vod_play($obj,['sid'=>$param['sid'],'nid'=>$param['nid']])} `,})
+               </script>
+            </div>
+         </span>
+      </div>
+      <div class="searchput mb_none">
+         <form name="formsearch" id="formsearch" action="{:mac_url('vod/search')}" onSubmit="return qrsearch();">
+            <div class="input_all clearfix">
+            <div class="input_input">
+               <input class="input" name="wd" type="text" id="keyword" placeholder="输入关键词"/>
+            </div>
+            <div class="imgbt_imgbt">
+               <input class="ico imgbt" type="submit" value="">
+            </div>
+            </div>
+         </form>
+      </div>
+      <div class="menubtn pc_none"><i class="ico menubtn_bg"></i></div>
+      <div class="mb_search pc_none"><i class="ico searchbtn_bg"></i></div>
+
+      <div class="search_hover">
+         <form name="formsearch" id="formsearch" action="{:mac_url('vod/search')}" onSubmit="return qrsearch();">
+            <div class="sh1">
+            <div class="inputall">
+               <div class="input_1">
+                  <div class="input_2">
+                  <input class="input"  name="wd" type="text" id="keyword" placeholder="输入关键词"/>
+                  </div>
+               </div>
+               <div class="imgbt_1">
+                  <input class="ico imgbt" type="submit" value="">
+               </div>
+            </div>
+            </div>
+            <div class="gb1">取消</div>
+         </form>
+      </div>
+
+      </div>
+   </div>
+   <div id="menu_right" class="menu_right">
+      <div class="nav_title">
+      <ul class="mb_name">
+         <li><a class="ico a_ico" >{$maccms.site_name}</a></li>
+      </ul>
+      <ul class="nav_ul clearfix">
+         {maccms:type ids="child" order="asc" by="sort" mid="1"}
+         <li><a href="{:mac_url_type($vo2,[],'show')}">{$vo.type_name}</a></li>
+         {/maccms:type}
+      </ul>
+      </div>
+      
+   </div>
+</div>
